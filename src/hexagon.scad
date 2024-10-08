@@ -1,8 +1,10 @@
 $fn = 6;
+coaster_diameter = 98;
+coaster_thickness = 8.5;
 
 module hole(){
 
-	cylinder(h = 8.5, d = 98);
+	cylinder(h = coaster_thickness, d = coaster_diameter);
 
 	cylinder(h = 15, d = 30, $fn = 50);
 
@@ -12,7 +14,7 @@ rotate([180, 0, 0]){
 
 	difference(){
 
-		cylinder(h = 8.5 + 3, d = 110);
+		cylinder(h = coaster_thickness + 3, d = coaster_diameter + 12);
 
 		hole();
 
